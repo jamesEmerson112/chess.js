@@ -211,6 +211,14 @@ var Chess = function (fen) {
     load(DEFAULT_POSITION)
   }
 
+  function getTurn() {
+    return turn;
+  }
+
+  function setTurn(newTurn) {
+    turn = newTurn;
+  }
+
   function load(fen, keep_headers) {
     if (typeof keep_headers === 'undefined') {
       keep_headers = false
@@ -1355,6 +1363,13 @@ var Chess = function (fen) {
     /***************************************************************************
      * PUBLIC API
      **************************************************************************/
+    getTurn: function() {
+      return turn;
+    },
+    setTurn: function(newTurn) {
+       turn = newTurn;
+    },
+
     load: function (fen) {
       return load(fen)
     },
